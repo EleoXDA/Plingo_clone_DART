@@ -37,7 +37,12 @@ part 'game_state.dart';
 /// Handles all logic related to the game.
 class GameBloc extends Bloc<GameEvent, GameState> {
   /// Constructor
-  GameBloc(this._statsRepository) : super(GameState(guesses: emptyGuesses()));
+  GameBloc(this._statsRepository)
+      : super(GameState(
+          guesses: emptyGuesses(),
+        )) {
+    on<GameStarted>(_onGameStarted);
+  }
 
   /// Interacts with storage for updating game stats.
   final GameStatsRepository _statsRepository;
