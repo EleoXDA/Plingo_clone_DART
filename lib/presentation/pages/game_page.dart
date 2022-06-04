@@ -90,7 +90,7 @@ class _Game extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 16),
           child: ElevatedButton(
             // TODO: Restart game here!
-            onPressed: () {},
+            onPressed: () => context.read<GameBloc>().add(const GameStarted()),
             child: const Text('Play again!'),
           ),
         ),
