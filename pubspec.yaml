@@ -1,0 +1,56 @@
+name: plingo
+description: A new RWenderlich Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.0.1
+  equatable: ^2.0.3
+  provider: ^6.0.0
+  bloc_concurrency: ^0.2.0
+  shared_preferences: ^2.0.13
+
+flutter_icons:
+  image_path: 'assets/launcher/logo_launcher.png'
+  adaptive_icon_background: '#343434'
+  adaptive_icon_foreground: 'assets/launcher/logo_launcher_adaptative.png'
+  android: 'ic_launcher'
+  ios: true
+  remove_alpha_ios: true
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.9.0
+  flutter_test:
+    sdk: flutter
+  effective_dart: ^1.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+  fonts:
+    - family: Rubik
+      fonts:
+        - asset: assets/fonts/Ubuntu-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Ubuntu-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Ubuntu-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Ubuntu-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Ubuntu-Regular.ttf
+        - asset: assets/fonts/Ubuntu-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Ubuntu-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Ubuntu-LightItalic.ttf
+          weight: 300
+          style: italic
