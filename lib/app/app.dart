@@ -42,7 +42,7 @@ class PlingoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Wordle-AZ',
+      title: 'Wo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: AppColors.primary,
@@ -96,7 +96,7 @@ class PlingoApp extends StatelessWidget {
       home: BlocProvider(
         create: (ctx) =>
             // TODO: Start game here!
-            GameBloc(ctx.read<GameStatsRepository>()),
+            GameBloc(ctx.read<GameStatsRepository>())..add(GameStarted()),
         child: const GamePage(),
       ),
     );
