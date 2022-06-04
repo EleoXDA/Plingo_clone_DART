@@ -47,7 +47,17 @@ class GameBloc extends Bloc<GameEvent, GameState> {
   /// Interacts with storage for updating game stats.
   final GameStatsRepository _statsRepository;
 
-  // TODO: Add logic for GameStarted
-  // TODO: Add logic for GameFinished
+  void _onGameStarted(
+    GameStarted event,
+    Emitter<GameState> emit,
+  ) {
+    print('Game has started!');
+    final puzzle = nextPuzzle(puzzles);
+    final guesses = emptyGuesses();
+    emit(GameState(
+      guesses: guesses,
+      puzzle: puzzle,
+    ));
+  } // TODO: Add logic for GameFinished
   // TODO: Add logic for LetterKeyPressed
 }
